@@ -75,6 +75,9 @@ extern class Api {
     @:native('luaL_dostring')
     static function luaL_dostring(l:State, s:String):Int;
     
+    @:native('luaL_dofile')
+    static function dofile(l:State, filename:String) : Int;
+    
     @:native('lua_pcall')
     static function lua_pcall(l:State, nargs:Int, nresult:Int, errfunc:Int):Int;
     
